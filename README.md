@@ -1,8 +1,8 @@
 # Puppeteer e2e Automated Testing Demo
 
-A demo project that demonstrates how to use Puppeteer and how to run it using CircleCI.
+A demo project that demonstrates how to use Puppeteer and Jest and how to run it using CircleCI.
 
-Build status: [![CircleCI](https://circleci.com/gh/alisterscott/puppeteer-demo/tree/master.svg?style=svg)](https://circleci.com/gh/alisterscott/puppeteer-demo/tree/master)
+Build status: [![CircleCI](https://circleci.com/gh/alisterscott/puppeteer-jest-demo/tree/master.svg?style=svg)](https://circleci.com/gh/alisterscott/puppeteer-jest-demo/tree/master)
 
 ## Prerequisites
 
