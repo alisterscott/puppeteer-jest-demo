@@ -9,6 +9,16 @@ test('can wait for an element to appear', async () => {
   await page.waitFor('#elementappearschild', { visible: true, timeout: 5000 })
 }, timeout)
 
+test('can use an element that appears after on page load', async () => {
+  const context = await global.__BROWSER__.createIncognitoBrowserContext()
+  const page = await context.newPage()
+  await page.goto(`${config.get('baseURL')}`)
+  await page.waitFor('#loadedchild', { visible: true, timeout: 5000 })
+  const element = await page.$('#loadedchild')
+  const text = await (await element.getProperty('textContent')).jsonValue()
+  expect(text).toBe('Loaded!')
+}, timeout)
+
 test('can handle alerts', async () => {
   const context = await global.__BROWSER__.createIncognitoBrowserContext()
   const page = await context.newPage()
